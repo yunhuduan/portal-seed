@@ -9,8 +9,8 @@ require.config({
         'jquery':['lib/jquery/jquery-1.9.1.min'],
         'template':['lib/arttemplate/template'],
         'page':['lib/pagejs/page'],
-        //'comjs':['com/Common'],
-        'config':['com/Config']
+        'config':['com/Config'],
+        'router':['com/Routers']
     },
     //include NOT AMD specification js frame code
     //包含其它非AMD规范的JS框架
@@ -19,11 +19,14 @@ require.config({
             'deps':['config','jquery','template','page']
         }
     }
-
 });
 
-require(['com/Common','config'],function (comjs,config) {
-    TestFunc();
+require(['jquery','template','page','config','com/Common'],function ($,template,page,config) {
 
-    console.log(config.baseUrl)
+    console.dir(config);
+
+    require(['router'],function (router) {
+        console.dir(router)
+    });
+
 });
