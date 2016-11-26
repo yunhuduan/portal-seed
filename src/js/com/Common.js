@@ -1,3 +1,7 @@
-function TestFunc(){
-    console.log('this is a commonjs function....testFunc')
-}
+define(['config'], function () {
+    var Com = {
+
+    };
+
+    return Com;
+});

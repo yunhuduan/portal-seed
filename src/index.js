@@ -10,23 +10,16 @@ require.config({
         'template':['lib/arttemplate/template'],
         'page':['lib/pagejs/page'],
         'config':['com/Config'],
-        'router':['com/Routers']
+        'routers':['com/Routers'],
+        'common':['com/Common']
     },
     //include NOT AMD specification js frame code
     //包含其它非AMD规范的JS框架
     shim:{
-        'com/Common':{
-            'deps':['config','jquery','template','page']
-        }
+
     }
 });
 
-require(['jquery','template','page','config','com/Common'],function ($,template,page,config) {
-
-    console.dir(config);
-
-    require(['router'],function (router) {
-        console.dir(router)
-    });
-
+require(['jquery','template','page','config','routers','common'],function ($,template,page,config,routers,common) {
+    
 });
