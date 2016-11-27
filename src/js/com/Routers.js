@@ -1,5 +1,5 @@
-define(['config'], function () {
-    return [
+define(['config','page'], function (config,page) {
+    var routes =  [
         {
             path: '/',
             require:['index']
@@ -9,7 +9,18 @@ define(['config'], function () {
         },{
             path: '/article/:id',
             require:['article/index']
+        },
+
+
+
+
+
+        {
+            path:'*',
+            require:['com/NotFound.js']
         }
 
     ];
+
+    return routes;
 });

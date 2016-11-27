@@ -11,6 +11,7 @@ require.config({
         'page':['lib/pagejs/page'],
         'config':['com/Config'],
         'routers':['com/Routers'],
+        'route':['com/Route'],
         'common':['com/Common']
     },
     //include NOT AMD specification js frame code
@@ -20,6 +21,10 @@ require.config({
     }
 });
 
-require(['jquery','template','page','config','routers','common'],function ($,template,page,config,routers,common) {
-    
+require(['jquery','template','page','config','routers','route','common'],function ($,template,page,config,routers,route,common) {
+
+
+    route(routers);//配置路由
+
+
 });
