@@ -1,23 +1,29 @@
-define(['config','page'], function (config,page) {
-    var routes =  [
-        {
-            path: '/',
-            require:['index']
-        }, {
+define(['config', 'page'], function (config, page) {
+    var routes = [
+       {
             path: '/article',
-            require:['article/index']
-        },{
+            require: ['article/index']
+        }, {
+            path: '/article/list',
+            require: ['article/list']
+        }, {
             path: '/article/:id',
-            require:['article/index']
+            require: ['article/detail']
+        }, {
+            path: '/category',
+            require: ['category/index']
+        }, {
+            path: '/category/list',
+            require: ['category/list']
+        }, {
+            path: '/category/:id',
+            require: ['category/detail']
         },
 
 
-
-
-
         {
-            path:'*',
-            require:['com/NotFound.js']
+            path: '*',
+            require: ['com/NotFound']
         }
 
     ];

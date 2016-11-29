@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 2016/11/27.
+ * Created by duanyunhu on 2016/11/27.
  */
 define(['config','page'], function (config,page) {
 
