@@ -4,7 +4,8 @@
 define(['common'],function (com) {
     var init = function (ctx,next) {
         console.log('article List invoke .....'+new Date().getTime());
-        $content.empty().append('<table><tr>123<td></td><td>xxx</td><td><a href="/article/123">详情</a></td></tr></table>')
+        $content.empty().append('<table><tr>123<td></td><td>xxx</td><td><a href="/article/123">详情</a></td></tr></table>');
+        next();
     }
     return init;
 });

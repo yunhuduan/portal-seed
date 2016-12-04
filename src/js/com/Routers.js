@@ -1,7 +1,8 @@
 define(['config', 'page'], function (config, page) {
     var routes = [
-       {
-            path: '/article',
+
+        {
+            path: '/article/*',
             require: ['article/index']
         }, {
             path: '/article/list',
@@ -9,8 +10,17 @@ define(['config', 'page'], function (config, page) {
         }, {
             path: '/article/:id',
             require: ['article/detail']
-        }, {
+        },
+
+
+
+
+
+        {
             path: '/category',
+            require: ['category/index']
+        }, {
+            path: '/category/*',
             require: ['category/index']
         }, {
             path: '/category/list',
@@ -19,6 +29,8 @@ define(['config', 'page'], function (config, page) {
             path: '/category/:id',
             require: ['category/detail']
         },
+
+
 
 
         {

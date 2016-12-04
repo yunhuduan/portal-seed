@@ -19,14 +19,12 @@ require.config({
     shim:{
 
     },
-    urlArgs: "v=" +  (new Date()).getTime()//清除缓存
+    urlArgs: "v=1"// +  (new Date()).getTime()//清除缓存
 });
 
 require(['jquery','template','page','config','routers','route','common'],function ($,template,page,config,routers,route,common) {
     route(routers);//配置路由
-    page();
     window.$leftMenu = $('#leftMenu');
     window.$content = $('#content');
-
 
 });
